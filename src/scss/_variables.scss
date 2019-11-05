@@ -1,0 +1,15 @@
+$colors: (
+  'black':#000000,
+  'cod-gray':#0e0e0e,
+  'shuttle-gray':#5a6b7a,
+  'white':#ffffff
+);
+
+@function getBrandColor($key) {
+  @return map-get($colors, $key);
+}
+
+@function getBrandColorAlpha($key, $level) {
+  $color: map-get($colors, $key);
+  @return rgba($color, $level);
+}

@@ -1,0 +1,103 @@
+<section id="puzzle" ng-class="{ 'with-help' : puzzle.help }">
+
+  <!-- Header -->
+
+  <header>
+    <h1 class="title">
+      <span>MediaMonks</span>
+    </h1>
+  </header>
+
+  <div class="row align-items-center">
+
+    <!-- Puzzle -->
+
+    <div class="col-md-7">
+      <div class="puzzle-container mb-5">
+        <div class="puzzle-area">
+          <div class="tile tile-position-1" data-position="1" data-validation="1" ng-click="puzzle.switchTile($event)">
+            <div class="part part-1"></div>
+            <span>1</span>
+          </div>
+          <div class="tile tile-position-2" data-position="2" data-validation="2" ng-click="puzzle.switchTile($event)">
+            <div class="part part-2"></div>
+            <span>2</span>
+          </div>
+          <div class="tile tile-position-3" data-position="3" data-validation="3" ng-click="puzzle.switchTile($event)">
+            <div class="part part-3"></div>
+            <span>3</span>
+          </div>
+          <div class="tile tile-position-4" data-position="4" data-validation="4" ng-click="puzzle.switchTile($event)">
+            <div class="part part-4"></div>
+            <span>4</span>
+          </div>
+          <div class="tile tile-position-5" data-position="5" data-validation="5" ng-click="puzzle.switchTile($event)">
+            <div class="part part-5"></div>
+            <span>5</span>
+          </div>
+          <div class="tile tile-position-6" data-position="6" data-validation="6" ng-click="puzzle.switchTile($event)">
+            <div class="part part-6"></div>
+            <span>6</span>
+          </div>
+          <div class="tile tile-position-7" data-position="7" data-validation="7" ng-click="puzzle.switchTile($event)">
+            <div class="part part-7"></div>
+            <span>7</span>
+          </div>
+          <div class="tile tile-position-8" data-position="8" data-validation="8" ng-click="puzzle.switchTile($event)">
+            <div class="part part-8"></div>
+            <span>8</span>
+          </div>
+          <div class="tile tile-position-9" data-position="9" data-validation="9" ng-click="puzzle.switchTile($event)">
+            <div class="part part-9"></div>
+            <span>9</span>
+          </div>
+          <div class="tile tile-position-10" data-position="10" data-validation="10" ng-click="puzzle.switchTile($event)">
+            <div class="part part-10"></div>
+            <span>10</span>
+          </div>
+          <div class="tile tile-position-11" data-position="11" data-validation="11" ng-click="puzzle.switchTile($event)">
+            <div class="part part-11"></div>
+            <span>11</span>
+          </div>
+          <div class="tile tile-position-12" data-position="12" data-validation="12" ng-click="puzzle.switchTile($event)">
+            <div class="part part-12"></div>
+            <span>12</span>
+          </div>
+          <div class="tile tile-position-13" data-position="13" data-validation="13" ng-click="puzzle.switchTile($event)">
+            <div class="part part-13"></div>
+            <span>13</span>
+          </div>
+          <div class="tile tile-position-14" data-position="14" data-validation="14" ng-click="puzzle.switchTile($event)">
+            <div class="part part-14"></div>
+            <span>14</span>
+          </div>
+          <div class="tile tile-position-15" data-position="15" data-validation="15" ng-click="puzzle.switchTile($event)">
+            <div class="part part-15"></div>
+            <span>15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data -->
+
+    <div class="col-md-5">
+      <p class="lead text-center">
+        Gracias por su ...
+      </p>
+      <p class="time text-center">
+        tiempo: <b id="counter">0s</b>
+      </p>
+      <p class="text-center">
+        <a href="#" class="btn btn-secondary btn-help" data-validation="1" ng-if="!puzzle.ended" ng-click="puzzle.toggleHelp()">
+          <span ng-if="!puzzle.help">Mostrar ayuda</span>
+          <span ng-if="puzzle.help">Ocultar ayuda</span>
+        </a>
+        <h2 class="congratulations text-center" ng-if="puzzle.ended">¡Felicidades!</h2>
+      </p>
+    </div>
+
+    <!-- -->
+
+  </div>
+</section>

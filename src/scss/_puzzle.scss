@@ -1,0 +1,158 @@
+#puzzle {
+  padding: 3rem 0;
+
+  /*--------------------------------------------------
+  ## Header & Data
+  --------------------------------------------------*/
+
+  header {
+    margin-bottom: 3rem;
+
+    .title {
+      background: url(../assets/logo-monks.svg) center right no-repeat;
+      background-size: contain;
+      color: getBrandColor('white');
+      height: 60px;
+      margin: 0;
+      text-align: right;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    color: getBrandColor('white');
+
+    &.time {
+      color: getBrandColorAlpha('white',0.5);
+      margin-bottom: 3rem;
+
+      #counter {
+        color: getBrandColorAlpha('white',0.75);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .btn-help {
+    background: getBrandColor('shuttle-gray');
+    border-color: getBrandColor('shuttle-gray');
+    border-radius: 0;
+    color: getBrandColor('white');
+    text-transform: uppercase;
+  }
+
+  .congratulations {
+    color: getBrandColor('white');
+  }
+
+  /*--------------------------------------------------
+  ## Puzzle
+  --------------------------------------------------*/
+
+  .puzzle-container {
+    margin: auto;
+    max-width: 450px;
+    position: relative;
+    width: 100%;
+
+    .puzzle-area {
+      padding-top: 100%;
+      width: 100%;
+    }
+
+    .tile {
+      background: center center no-repeat;
+      height: 25%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      transition: all 0.25s ease-in-out;
+      width: 25%;
+
+      .part {
+        background: url(../assets/monks.jpg) center center no-repeat;
+        background-size: 100%;
+        pointer-events: none;
+        display: block;
+        height: 400%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 400%;
+        z-index: 5;
+
+        &-1 { left: 0; }
+        &-2 { left: -100%; }
+        &-3 { left: -200%; }
+        &-4 { left: -300%; }
+        &-5 { left: 0; top: -100%; }
+        &-6 { left: -100%; top: -100%; }
+        &-7 { left: -200%; top: -100%; }
+        &-8 { left: -300%; top: -100%; }
+        &-9 { left: 0; top: -200%; }
+        &-10 { left: -100%; top: -200%; }
+        &-11 { left: -200%; top: -200%; }
+        &-12 { left: -300%; top: -200%; }
+        &-13 { left: 0; top: -300%; }
+        &-14 { left: -100%; top: -300%; }
+        &-15 { left: -200%; top: -300%; }
+      }
+
+      span {
+        color: getBrandColor('white');
+        display: none;
+        padding: 10px;
+        pointer-events: none;
+        position: relative;
+        z-index: 15;
+      }
+
+      &-position-1 { left: 0; top: 0; }
+      &-position-2 { left: 25%; top: 0; }
+      &-position-3 { left: 50%; top: 0; }
+      &-position-4 { left: 75%; top: 0; }
+      &-position-5 { left: 0; top: 25%; }
+      &-position-6 { left: 25%; top: 25%; }
+      &-position-7 { left: 50%; top: 25%; }
+      &-position-8 { left: 75%; top: 25%; }
+      &-position-9 { left: 0; top: 50%; }
+      &-position-10 { left: 25%; top: 50%; }
+      &-position-11 { left: 50%; top: 50%; }
+      &-position-12 { left: 75%; top: 50%; }
+      &-position-13 { left: 0; top: 75%; }
+      &-position-14 { left: 25%; top: 75%; }
+      &-position-15 { left: 50%; top: 75%; }
+      &-position-16 { left: 75%; top: 75%; }
+    }
+  }
+
+  /*--------------------------------------------------
+  ## With help
+  --------------------------------------------------*/
+
+  &.with-help {
+
+    .tile {
+
+      &:before {
+        background: getBrandColorAlpha('black',0.5);
+        content: '';
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

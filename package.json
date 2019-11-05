@@ -1,0 +1,41 @@
+{
+  "name": "miguelgs-starter-yarn",
+  "version": "1.0.0",
+  "description": "Miguel García Starter - Yarn",
+  "main": "index.js",
+  "author": "Miguel García",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "serve": "webpack-dev-server --mode=development --open"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "angular": "1.7.8",
+    "angular-ui-router": "^1.0.23",
+    "autoprefixer": "^9.7.1",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^3.1.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
